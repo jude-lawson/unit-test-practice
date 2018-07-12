@@ -21,6 +21,9 @@ describe('Box', () => {
     assert.equal(box.width, 40);
   });
 
+  it('should calculate its area', () => {
+    let box = new Box(30, 30);
 
-  
+    assert.equal(box.area(), 900);
+  });
 });
