@@ -3,6 +3,12 @@ const assert = chai.assert;
 const Box = require('../Box.js')
 
 describe('Box', () => {
+  let box;
+
+  beforeEach(() => {
+    box = new Box(30, 40);
+  });
+
   it('should return true', () => {
     assert(true);
   });
@@ -15,15 +21,11 @@ describe('Box', () => {
   });
 
   it('should take a height and a width as arguments', () => {
-    let box = new Box(50, 40);
-
-    assert.equal(box.height, 50);
+    assert.equal(box.height, 30);
     assert.equal(box.width, 40);
   });
 
   it('should calculate its area', () => {
-    let box = new Box(30, 30);
-
-    assert.equal(box.area(), 900);
+    assert.equal(box.area(), 1200);
   });
 });
